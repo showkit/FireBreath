@@ -4,7 +4,9 @@ GEN='Xcode'
 
 source "${0%/*}/common.sh" "$@"
 
-ARCH=-DCMAKE_OSX_ARCHITECTURES="${CMAKE_OSX_ARCHITECTURES:-i386;x86_64}"
+ARCH=-DCMAKE_OSX_ARCHITECTURES="${CMAKE_OSX_ARCHITECTURES:i386;x86_64}"
+export MACOSX_DEPLOYMENT_TARGET=10.8
+export MACOSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
 
 pushd "$BUILDDIR"
 cmake -G "$GEN" -DFB_PROJECTS_DIR="${PROJDIR}" ${ARCH} "$@" "${FB_ROOT}"

@@ -31,7 +31,7 @@ PluginWindowMacICA::PluginWindowMacICA()
 void PluginWindowMacICA::InvalidateWindow() const {
     if (m_displayOnInvalidate) {
         CALayer *mlayer = (CALayer*) m_layer;
-#if 1
+#if 0
         // setNeedsDisplay will draw sometime in the future.
         [[mlayer sublayers] makeObjectsPerformSelector:@selector(setNeedsDisplay)];
 #else
