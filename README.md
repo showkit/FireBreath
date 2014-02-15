@@ -1,3 +1,14 @@
+ShowKit
+=======
+# particular instructions for pulling in new firebreath updates:
+git remote add upstream https://github.com/firebreath/FireBreath.git
+git fetch upstream
+git merge upstream/master
+
+# commits go here:
+git push origin master
+
+
 FireBreath
 ==========
 
