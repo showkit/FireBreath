@@ -54,7 +54,7 @@ PluginWindowMacCA::PluginWindowMacCA()
     txtlayer.autoresizingMask = kCALayerWidthSizable | kCALayerHeightSizable;
     txtlayer.needsDisplayOnBoundsChange = YES;
     txtlayer.hidden = true;
-    [mlayer addSublayer:txtlayer];
+    //[mlayer addSublayer:txtlayer];
     m_txtlayer = txtlayer;
 }
 
@@ -107,8 +107,8 @@ NPError PluginWindowMacCA::SetWindow(NPWindow* window)
 
     NPError rval = PluginWindowMac::SetWindow(window);
     txtlayer.hidden = !m_drawLabel;
-    [txtlayer removeFromSuperlayer];
-    [mlayer addSublayer:txtlayer];
+    //[txtlayer removeFromSuperlayer];
+    //[mlayer addSublayer:txtlayer];
     return rval;
 }
 
