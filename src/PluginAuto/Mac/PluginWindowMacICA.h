@@ -32,7 +32,7 @@ namespace FB {
         void InvalidateWindow() const;
 
     private:
-        bool m_displayOnInvalidate;
+        mutable bool m_displayOnInvalidate;
     };
 };
 #endif // H_PLUGINWINDOWMACICA

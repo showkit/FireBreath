@@ -40,4 +40,5 @@ void PluginWindowMacICA::InvalidateWindow() const {
 #endif
     }
     PluginWindowMac::InvalidateWindow();
+    m_displayOnInvalidate = false;
 }
