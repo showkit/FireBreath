@@ -259,7 +259,8 @@ NPError PluginWindowMac::SetWindow(NPWindow* window) {
 }
 
 FB::Rect PluginWindowMac::getWindowPosition() const {
-    FB::Rect r = { m_y, m_x, static_cast<int32_t>(m_y + m_height), static_cast<int32_t>(m_x + m_width) };
+    FB::Rect r = { static_cast<int32_t>(m_y), static_cast<int32_t>(m_x),
+                   static_cast<int32_t>(m_y + m_height), static_cast<int32_t>(m_x + m_width) };
     return r;
 }
 

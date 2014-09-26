@@ -110,6 +110,7 @@ bool PluginWindowMacCG::SendEvent(PluginEvent* evt) {
         } else if (rval && evt->validType<MacEventCocoa>()) {
             FB::MacEventCocoa *event = evt->get<MacEventCocoa>();
             if (NPCocoaEventDrawRect == event->msg.type) {
+
                 FB::Rect bounds = { 0, 0, static_cast<int32_t>(event->msg.data.draw.height), static_cast<int32_t>(event->msg.data.draw.width) };
                 DrawLabel(event->msg.data.draw.context, bounds);
             }

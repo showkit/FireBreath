@@ -90,7 +90,9 @@ int16_t PluginEventMacCocoa::HandleEvent(void* event) {
     switch(evt->type) {
         case NPCocoaEventDrawRect: {
             if (window->getDrawingModel() == PluginWindowMac::DrawingModelCoreGraphics) {
-                FB::Rect clipRect = { static_cast<int32_t>(evt->data.draw.y), static_cast<int32_t>(evt->data.draw.x),
+                FB::Rect clipRect = {
+                    static_cast<int32_t>(evt->data.draw.y),
+                    static_cast<int32_t>(evt->data.draw.x),
                     static_cast<int32_t>(evt->data.draw.y + evt->data.draw.height),
                     static_cast<int32_t>(evt->data.draw.x + evt->data.draw.width) };
                 FB::Rect bounds = window->getWindowPosition();
