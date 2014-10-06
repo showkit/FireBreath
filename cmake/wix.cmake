@@ -39,8 +39,9 @@ if (WIN32)
             "$ENV{ProgramFiles(x86)}/Windows Installer XML v3.6"
             "$ENV{ProgramFiles(x86)}/WiX Toolset v3.6"
             "$ENV{ProgramFiles(x86)}/WiX Toolset v3.7"
+            "$ENV{ProgramFiles(x86)}/WiX Toolset v3.8"
+            "$ENV{ProgramFiles(x86)}/WiX Toolset v3.9"
             )
-
 
         #DBG_MSG("DBG (WIX_POSSIBLE_ROOT_DIRS=${WIX_POSSIBLE_ROOT_DIRS}")
 
