@@ -71,7 +71,7 @@ MACRO(add_mac_plugin PROJECT_NAME PLIST_TEMPLATE STRINGS_TEMPLATE LOCALIZED_TEMP
         ${CMAKE_CURRENT_BINARY_DIR}/bundle/Info.plist
         ${CMAKE_CURRENT_BINARY_DIR}/bundle/English.lproj/InfoPlist.strings
         ${CMAKE_CURRENT_BINARY_DIR}/bundle/English.lproj/Localized.r
-        ${CMAKE_CURRENT_BINARY_DIR}/bundle/English.lproj/Localized.rsrc
+#${CMAKE_CURRENT_BINARY_DIR}/bundle/English.lproj/Localized.rsrc
     )
 
     add_definitions(
